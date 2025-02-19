@@ -12,7 +12,9 @@ class TEMP_NavPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
             // Example of a button to navigate onto additional pages
+            //TODO: Copy the code below to create a button that navigates to your page
             // ElevatedButton(
             //   onPressed: () {
             //     Navigator.push(
@@ -22,6 +24,15 @@ class TEMP_NavPage extends StatelessWidget {
             //   },
             //   child: Text('Go to YOUR PAGE NAME'),
             // ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                );
+              },
+              child: Text('Go to Profile Page'),
+            ),
           ],
         ),
       ),
