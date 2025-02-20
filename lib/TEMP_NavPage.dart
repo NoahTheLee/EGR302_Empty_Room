@@ -1,7 +1,9 @@
 import 'package:egr302_empty_room/ProfilePage.dart';
+import 'package:egr302_empty_room/login_page.dart';
 import 'package:flutter/material.dart';
 
 class TEMP_NavPage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +26,19 @@ class TEMP_NavPage extends StatelessWidget {
             //   },
             //   child: Text('Go to YOUR PAGE NAME'),
             // ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+              child: Text('Go to Login Page',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              ),
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
