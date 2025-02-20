@@ -1,5 +1,6 @@
 import 'package:egr302_empty_room/ProfilePage.dart';
 import 'package:egr302_empty_room/RoomDetailScreen.dart';
+import 'package:egr302_empty_room/MainScreen.dart';
 import 'package:egr302_empty_room/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -70,7 +71,7 @@ class TEMP_NavPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                  MaterialPageRoute(builder: (context) => ImageTilePage()),
                 );
               },
               child: Text('Go to Main Page',

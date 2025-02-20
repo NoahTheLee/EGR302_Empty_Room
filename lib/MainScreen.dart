@@ -1,11 +1,14 @@
 import 'dart:math';
+import 'package:egr302_empty_room/TEMP_NavPage.dart';
+import 'package:egr302_empty_room/ProfilePage.dart';
+import 'package:egr302_empty_room/RoomDetailScreen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: ImageTilePage(),
-  ));
-}
+// void main() {
+//   runApp(MaterialApp(
+//     home: ImageTilePage(),
+//   ));
+// }
 
 class ImageTilePage extends StatefulWidget {
   @override
@@ -62,12 +65,20 @@ class _ImageTilePageState extends State<ImageTilePage> {
   // Profile button tapped (open drawer)
   void profileButtonTapped() {
     print("Profile button pressed");
-    Scaffold.of(context).openEndDrawer();  // Open the drawer from the right
+    // Scaffold.of(context).openEndDrawer();  // Open the drawer from the right
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ProfilePage()),
+    );
   }
 
   // Tile tapped
   void tileTapped(String tileText) {
     print("$tileText tile pressed");
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => RoomDetailScreen()),
+    );
   }
 
   @override
@@ -104,6 +115,17 @@ class _ImageTilePageState extends State<ImageTilePage> {
                 leading: Icon(Icons.clear),
                 title: Text("Show All"),
                 onTap: showAll,
+              ),
+              ListTile(
+                // leading: Icon(Icons.clear),
+                title: Text("Temp Menu"),
+                // onTap: showAll,
+                onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TEMP_NavPage()),
+                );
+              },
               ),
             ],
           ),
