@@ -1,6 +1,5 @@
 import 'package:egr302_empty_room/TEMP_NavPage.dart';
 import 'package:flutter/material.dart';
-import 'login_page.dart';
 
 void main() {
   runApp(MyApp());
