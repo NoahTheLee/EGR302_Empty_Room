@@ -31,7 +31,11 @@ class TEMP_NavPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => ProfilePage()),
                 );
               },
-              child: Text('Go to Profile Page'),
+              child: Text('Go to Profile Page',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              ),
             ),
           ],
         ),
