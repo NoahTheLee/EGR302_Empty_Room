@@ -1,15 +1,19 @@
 import 'package:egr302_empty_room/TEMP_NavPage.dart';
 import 'package:flutter/material.dart';
+import 'login_page.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Navigation Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
