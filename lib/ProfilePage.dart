@@ -6,6 +6,17 @@ var birthday = 'January 1, 1990';
 var email = 'jdoe@anon.net';
 
 class ProfilePage extends StatelessWidget {
+
+  void _showMessage(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: Colors.green,
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,13 +63,22 @@ class ProfilePage extends StatelessWidget {
               width: 200,
               height: 50,
               child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                onPressed: () {
+                  _showMessage(context, "You changed your password!");
+                },
+                child: const Center(child: Text('Change Password', style: TextStyle(fontSize: 16, color: Colors.white))),
               ),
-              onPressed: () {
-                print("A button was pressed!");
-              },
-              child: Text('Change Password', style: TextStyle(color: Colors.white)),
+            ),
+            SizedBox(height: 10),
+            
+            SizedBox(
+              width: 200,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {
+                  _showMessage(context, "You logged out successfully!");
+                },
+                child: const Center(child: Text('Log Out', style: TextStyle(fontSize: 16, color: Colors.white))),
               ),
             ),
             SizedBox(height: 10),
@@ -66,27 +86,10 @@ class ProfilePage extends StatelessWidget {
               width: 200,
               height: 50,
               child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-              ),
-              onPressed: () {
-                print("A button was pressed!");
-              },
-              child: Text('Log Out', style: TextStyle(color: Colors.white)),
-              ),
-            ),
-            SizedBox(height: 10),
-            SizedBox(
-              width: 200,
-              height: 50,
-              child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-              ),
-              onPressed: () {
-                print("A button was pressed!");
-              },
-              child: Text('Delete Account', style: TextStyle(color: Colors.white)),
+                onPressed: () {
+                  _showMessage(context, "Your account has been deleted!");
+                },
+                child: const Center(child: Text('Delete Account', style: TextStyle(fontSize: 16, color: Colors.white))),
               ),
             ),
           ],
