@@ -1,4 +1,5 @@
 import 'package:egr302_empty_room/ProfilePage.dart';
+import 'package:egr302_empty_room/RoomDetailScreen.dart';
 import 'package:egr302_empty_room/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,19 @@ class TEMP_NavPage extends StatelessWidget {
             //   },
             //   child: Text('Go to YOUR PAGE NAME'),
             // ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RoomDetailScreen()),
+                );
+              },
+              child: Text('Go to Room Detail Screen',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              ),
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
