@@ -66,6 +66,19 @@ class TEMP_NavPage extends StatelessWidget {
               ),
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                );
+              },
+              child: Text('Go to Main Page',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              ),
+            ),
           ],
         ),
       ),
